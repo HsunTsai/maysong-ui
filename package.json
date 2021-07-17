@@ -1,25 +1,40 @@
 {
-  "name": "maysong-ui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "@babel/core": "^7.14.6",
-    "@storybook/addon-actions": "^6.3.4",
-    "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/react": "^6.3.4",
-    "babel-loader": "^8.2.2"
-  },
-  "dependencies": {}
+	"name": "maysong-ui",
+	"version": "1.0.0",
+	"description": "",
+	"main": "lib/index.js",
+	"module": "lib/index.esm.js",
+	"types": "lib/index.d.ts",
+	"keywords": [
+		"stroybook",
+		"react",
+		"typescript"
+	],
+	"author": "Hsun Tsai",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.14.6",
+		"@rollup/plugin-commonjs": "^19.0.1",
+		"@rollup/plugin-node-resolve": "^13.0.2",
+		"@storybook/addon-actions": "^6.3.4",
+		"@storybook/addon-essentials": "^6.3.4",
+		"@storybook/addon-links": "^6.3.4",
+		"@storybook/react": "^6.3.4",
+		"babel-loader": "^8.2.2",
+		"postcss": "^8.3.5",
+		"react": "^16.14.0",
+		"react-dom": "^16.14.0",
+		"rollup": "^2.53.2",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-postcss": "^4.0.0",
+		"rollup-plugin-typescript2": "^0.30.0"
+	},
+	"dependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook",
+		"build": "rollup -c",
+		"format": "prettier --write \"{,src/**/}*.{js,jsx}\""
+	}
 }
